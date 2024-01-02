@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impossible Wordle</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div id = "impossibleWordle" style="display:flex; flex-direction: column;">
+    <div id = "game">
+        <h1 style= "color:white; font-size: 50px; font-family:Arial, Helvetica, sans-serif">Wordle Clone</h1>
+
+        <div id="popupMenu"  style="display:none; text-align: center; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:#393733; border:1px solid black; padding:100px; border-radius:10px; font-family: 'Arial', sans-serif; color:black;">
+            <h2><a href="javascript:location.reload();" style="text-align:center; color:rgb(255, 255, 255);">Retry</a></h2>
+            <!-- <h2><a href="./index.html?level=1" style="text-align:center; color:black;">Level 1</a></h2>
+            <h2><a href="./index.html?level=2" style="text-align:center; color:black;">Level 2</a></h2>
+            <h2><a href="./index.html?level=3" style="text-align:center; color:black;">Level 3</a></h2> -->
+        </div>
+        <!-- <div class="input-layer" style="color:white;font-size:50px; margin-top: 5px;">
+            <label for="wordLength">Choose word length:</label>
+            <input type="number" id="wordLength" min="1" max="10" placeholder="4-10">
+            <button onclick="generateAndDisplayWord()">Generate Word</button>
+            <script src="./src/index.js"></script>
+        </div> -->
+        <div class="grid">
+        </div>
+        
+    </div>
+    <div id="keyboard">
+
+    </div>
+    </div>
+
+        
+    <script src="./src/index.js" type = "module"></script>    
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+html,body{
+    background: var(--default);
+    height: 100%; /* Full height of the viewport */
+    margin: 0; /* Reset default margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+:root {
+    --default: #161515;
+    --empty: #3a3a3a;
+    --wrong_placement:#a4991c; 
+    --correct_letter:#136110;
+}
+
+#game{
+    display:grid;
+    place-items: center;
+    width:100%;
+    height:600px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+
+}
+
+.keyboard {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(5, auto);
+
+}
+
+.input-layer input[type="number"],
+.input-layer button {
+    padding: 10px 20px; /* Increase padding for larger touch area */
+    font-size: 18px; /* Larger text */
+    margin: 5px; /* Space out elements */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners for aesthetics */
+}
+
+.input-layer input[type="number"] {
+    width: 100px; /* Or any other suitable width */
+}
+
+.box{
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--empty);
+    margin: 4px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    /* font-weight: bold; */
+
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+}
+
+.box-empty{
+    background: var(--empty);
+}
+
+.box-wrong{
+    background: var(--wrong_placement);
+}
+.box-correct{
+    background: var(--correct_letter);
+}
+
+.animated {
+    animation: flip_letter 0.5s ease;
+}
+
+@keyframes flip_letter {
+    0% {
+        transform:scaleY(1);
+    }
+    50% {
+        transform:scaleY(0);
+    }
+    100% {
+        transform:scaleY(1);
+    }
+}
+
+#keyboardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust space between the grid and the keyboard */
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0; /* Space between rows */
+}
+
+.key {
+    width: 40px; /* Key width */
+    height: 60px; /* Key height */
+    margin: 0 3px; /* Space between keys */
+    border: 1px solid #777; /* Key border */
+    background-color: #ddd; /* Key background color */
+    cursor: pointer; /* Change cursor on hover */
+    /* Add more styles (like font, border-radius, etc.) as needed */
+}
+
+.key-empty{
+    background: var(--empty);
+}
+
+.key-wrong{
+    background: var(--wrong_placement);
+}
+.key-correct{
+    background: var(--correct_letter);
+}

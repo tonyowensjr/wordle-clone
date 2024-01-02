@@ -1,0 +1,5 @@
+# python files for manipulating the words
+*.py
+
+# text files
+*.txt
